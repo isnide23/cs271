@@ -62,5 +62,6 @@ CHIP CPU {
     Or(a=jump0, b=jump1, out=jump01);
     Or(a=jump01, b=jump2, out=jump012);
     And(a=jump012, b=instruction[15], out=jump);
+    And(a=instruction[15], b=instruction[3], out=writeM)
 	PC(in=A,load=jump,inc=true,reset=reset,out[0..14]=pc);
 }
