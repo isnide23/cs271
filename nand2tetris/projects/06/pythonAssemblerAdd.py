@@ -136,7 +136,7 @@ def c_trans(trans_code):
     print("BINARY:", binary_code)
 
 
-    return "111 acccccc ddd jjj"
+    return binary_code
 #loop through and translate
 for x in processed_array:
     if re.findall("^@", x) != []:
@@ -149,6 +149,7 @@ print("-----TRANSLATED ARRAY------")
 print(tranlated_array)
 for x in tranlated_array:
     print(x)
+    create_hack_file.write(x+"\n")
 
 #write translated array to add.hack
 
